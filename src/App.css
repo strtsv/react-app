@@ -1,24 +1,85 @@
-.App {
+/* General styles*/
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Open Sans", Helevetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+blockquote {
+  color: #999;
+  font-size: 18px;
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.cell {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Login styles */
+.login-form {
+  position: relative;
+  height: 120px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background: #95cbef;
+  display: inline-block;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.login-form input {
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.login-btn {
+  display: block;
+  height: 40px;
+  width: 80px;
+  background: #1258a0;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  outline: none;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.login-btn:hover,
+.login-btn:focus,
+.login-btn:active {
+  background: #5a62df;
 }
