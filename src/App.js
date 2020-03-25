@@ -1,32 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import logo from "./logo.svg";
+import { JobBoard } from "./JobBoard";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Header from "./Header";
-import RegistrationForm from './RegistrationForm';
-
-const menu = [
-  {
-    link: "/articles",
-    label: "Articles"
-  },
-  {
-    link: "/contacts",
-    label: "Contacts"
-  },
-  {
-    link: "/posts",
-    label: "Posts"
-  }
-];
-
-class App extends Component {
-  render() {
-    return (
+function App() {
+  return (
+    <Router>
       <div>
-        <Header items={menu} />
-        <RegistrationForm />
+        <JobBoard />
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 export default App;
