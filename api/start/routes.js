@@ -13,3 +13,7 @@ Route.group(() => {
   Route.delete("jobs/all/:id", "JobController.destroy").middleware("auth");
   Route.delete("projects/:id", "ProjectController.delete").middleware("auth");
 }).prefix("api");
+
+Route.get("get/:id", "ArticleController.show");
+Route.post("create", "ArticleController.create");
+Route.get("list", "ArticleController.index");

@@ -7,6 +7,13 @@ class ArticleSchema extends Schema {
   up () {
     this.create('articles', (table) => {
       table.increments()
+      table
+        .string("title", 255)
+        .nullable()
+        .unique()
+        .index();
+      table.text("body");
+      table.string("created", 255);
       table.timestamps()
     })
   }
