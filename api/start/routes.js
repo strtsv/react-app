@@ -9,6 +9,6 @@ Route.get('/', () => {
 Route.group(() => {
   Route.get("get/:id", "ArticleController.show");
   Route.delete("articles/:id", "ArticleController.delete");
-  Route.post("create", "ArticleController.create");
+  Route.post("articles", "ArticleController.create");
   Route.get("list", "ArticleController.index");
 }).prefix("api");
