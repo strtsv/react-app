@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
 
 class App extends React.Component {
   state = {
     articles: [],
     showCreateArticleForm: false
+  };
+  
+  constructor(props) {
+    super(props);
   };
 
   toggleShowCreateArticleForm = () => {
@@ -11,20 +15,21 @@ class App extends React.Component {
       showCreateArticleForm: !this.state.showCreateArticleForm
     });
   };
+  
   render() {
     return (
       <div className="container">
-      <h1 className="text-center my-5">Article Manager</h1>
-      <div className="text-center mb-5">
-        <button
-          className={`btn ${
-            this.state.showCreateArticleForm ? "btn-danger" : "btn-info"
-          }`}
-          onClick={this.toggleShowCreateArticleForm}
-        >
-          {this.state.showCreateArticleForm ? "Cancel" : "Create Article"}
-        </button>
-      </div>
+        <h1 className="text-center my-5">Articles Manager</h1>
+        <div className="text-center mb-5">
+          <button
+            className={`btn ${
+              this.state.showCreateArticleForm ? "btn-danger" : "btn-info"
+            }`}
+            onClick={this.toggleShowCreateArticleForm}
+          >
+            {this.state.showCreateArticleForm ? "Cancel" : "Create Article"}
+          </button>
+        </div>
       </div>
     );
   }
