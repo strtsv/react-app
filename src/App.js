@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends React.Component {
+  state = {
+    articles: [],
+    showCreateArticleForm: false
+  };
+
+  toggleShowCreateArticleForm = () => {
+    this.setState({
+      showCreateArticleForm: !this.state.showCreateArticleForm
+    });
+  };
+  render() {
+    return (
+      <div className="container">
+      <h1 className="text-center my-5">Article Manager</h1>
+      <div className="text-center mb-5">
+        <button
+          className={`btn ${
+            this.state.showCreateArticleForm ? "btn-danger" : "btn-info"
+          }`}
+          onClick={this.toggleShowCreateArticleForm}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {this.state.showCreateArticleForm ? "Cancel" : "Create Article"}
+        </button>
+      </div>
+      </div>
+    );
+  }
 }
 
 export default App;
